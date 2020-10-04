@@ -293,8 +293,69 @@ const db = require('./models');
 //   process.exit();
 // });
 
+
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
+
+// love either frilly shirtsleeves or frilly collars
+// db.Vampire.find({
+//   loves: {
+//     $in: ['frilly shirtsleeves', 'frilly collars']
+//   },
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// love brooding
+// db.Vampire.find({loves: 'brooding'}, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// love at least one of the following: appearing innocent, trickery, lurking in rotting mansions, R&B music
+// db.Vampire.find({
+//   loves: {
+//     $in: ['appearing innocent', 'trickery', 'lurking in rotting mansions', 'R&B music']
+//   }
+//   },
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// love fancy cloaks but not if they also love either top hats or virgin blood * Hint-You will also have to use $nin *
+// db.Vampire.find({
+//   loves: {
+//     $in: ['fancy cloaks'],
+//     $nin: ['top hats', 'virgin blood']
+//   }
+// }, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// })
+
+
+
 
 /////////////////////////////////////////////////
 //### Negative Selection
