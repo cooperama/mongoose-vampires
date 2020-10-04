@@ -355,10 +355,74 @@ const db = require('./models');
 // })
 
 
-
-
 /////////////////////////////////////////////////
 //### Negative Selection
+
+
+// love ribbons but do not have brown eyes
+// db.Vampire.find({
+//   loves: 'ribbons',
+//   eye_color: {
+//     $ne: 'brown'
+//   }
+// }, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// })
+
+
+
+// are not from Rome
+// db.Vampire.find({
+//   location: {
+//     $ne: 'Rome, Italy'
+//   }
+// }, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// })
+
+
+
+// do not love any of the following: [fancy cloaks, frilly shirtsleeves, appearing innocent, being tragic, brooding]
+// db.Vampire.find({
+//   loves: {
+//       $nin: ['fancy cloaks', 'frilly shirtsleeves', 'appearing innocent', 'being tragic', 'brooding']}
+// }, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// })
+
+
+
+// have not killed more than 200 people
+// db.Vampire.find({
+//   victims: {
+//     $lt: 200
+//   }
+// }, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// })
+
+
+
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
