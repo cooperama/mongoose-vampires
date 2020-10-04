@@ -428,9 +428,46 @@ const db = require('./models');
 /////////////////////////////////////////////////
 // ## REPLACE
 
+// Replace the vampire called 'Claudia' with a vampire called 'Eve'.
+
+// db.Vampire.replaceOne(
+//   {name: 'Claudia'},
+//   {name: 'Eve'},
+//   (err, claudiaToEve) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(claudiaToEve);
+//     }
+//     process.exit();
+// })
+
+
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
+
+
+
+// Update 'Eve' to have a gender of 'm'
+
+// db.Vampire.findOneAndUpdate(
+//   {name: 'Eve'},
+//   {gender: 'm'}, 
+//   {new: true},
+//   (err, vamp) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(vamp);
+//     }
+//     process.exit();
+// })
+
+
+
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
