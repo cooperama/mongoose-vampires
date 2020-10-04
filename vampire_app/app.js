@@ -171,6 +171,61 @@ const db = require('./models');
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
+// have a title property
+// db.Vampire.find({title: {$exists: true}}, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+
+// do not have a victims property
+// db.Vampire.find({victims: {$exists: false}}, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// have a title AND no victims
+// db.Vampire.find({
+//   title: {$exists: true},
+//   victims: {$exists: false}
+//   },
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// have victims AND the victims they have are greater than 1000
+// db.Vampire.find({
+//   victims: {
+//     $exists: true,
+//     $gt: 1000
+//   }},
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+
 /////////////////////////////////////////////////
 // ### Select with OR
 
