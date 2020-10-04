@@ -503,6 +503,151 @@ const db = require('./models');
 /////////////////////////////////////////////////
 // ## REMOVE
 
+// Remove a single document wherein the hair_color is 'brown'
+
+// ------------ So I tried the below... and it removed all vampires with brown hair instead of just one...
+
+// db.Vampire.remove(
+//   {hair_color: 'brown'},
+//   {justOne: true},
+//   (err, vamps) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(vamps);
+//     }
+//     process.exit();
+//   }
+// )
+
+// ------------ adding them back in to use a different method..
+
+// db.Vampire.insertMany([
+//   {
+//     name: 'Count Chocula',
+//     hair_color: 'brown',
+//     eye_color: 'brown',
+//     dob: new Date(1971, 2, 13, 7, 47),
+//     loves: ['cereal','marshmallows'],
+//     location: 'Minneapolis, Minnesota, US',
+//     gender: 'm',
+//     victims: 2
+//   },{
+//     name: 'Dracula',
+//     dob: new Date(937, 0, 24, 13, 0),
+//     hair_color: 'brown',
+//     eye_color: 'blue',
+//     loves: ['Winona Ryder', 'top hats', 'fancy cloaks', 'handlebar   mustaches'],
+//     location: 'Transylvania, Romania',
+//     gender: 'm',
+//     victims: 1238
+//   },{
+//     name: 'Elizabeth Bathory ',
+//     dob: new Date(1560, 8, 7, 22, 10),
+//     hair_color: 'brown',
+//     eye_color: 'brown',
+//     loves: ['virgin blood', 'fancy cloaks','frilly collars'],
+//     location: 'Nyírbátor, Hungary',
+//     gender: 'f',
+//     victims: 980
+//   },{
+//     name: 'Louis de Pointe du Lac',
+//     dob: new Date(1766, 6, 4, 2, 1),
+//     hair_color: 'brown',
+//     eye_color: 'blue',
+//     loves:['brooding', 'Claudia', 'staring longingly into the   distance'],
+//     location: 'New Orleans, Louisiana, US',
+//     gender:'m',
+//     victims: 150
+//   },{
+//     name:'Santino',
+//     dob: new Date(1465, 6, 1, 10, 42),
+//     hair_color: 'brown',
+//     eye_color: 'brown',
+//     loves: ['trickery', 'vampiric cults', 'fancy cloaks'],
+//     location: 'Rome, Italy',
+//     gender: 'm',
+//     victims: 1103
+//   },{
+//     name:'Akasha',
+//     dob: new Date(-8000, 6, 1, 10, 42),
+//     hair_color: 'brown',
+//     eye_color: 'green',
+//     loves: ['eating hearts', 'bathing in roses', 'elaborate   headdresses', 'R&B music'],
+//     location: 'Kemet, Egypt',
+//     gender: 'f',
+//     victims: 210234,
+//     title: 'Queen of the Damned'
+//   },{
+//     name: 'Edward Cullen',
+//     dob: new Date(1901, 6, 20, 0, 57),
+//     hair_color: 'brown',
+//     eye_color: 'brown',
+//     loves: ['brooding', 'diamond skin', 'calling people spider   monkeys'],
+//     location: 'Chicago, Illinois, US',
+//     gender: 'm',
+//   },{
+//     name: 'René Tremblay',
+//     dob: new Date(1922, 2, 8, 5, 3),
+//     hair_color: 'brown',
+//     eye_color: 'green',
+//     loves: ['frilly shirtsleeves', 'trickery', 'card games'],
+//     location: 'Bucharest, Romania',
+//     gender: 'm',
+//     victims: 134
+//   },{
+//     name: 'Barnabas Spenser',
+//     hair_color: 'brown',
+//     eye_color: 'brown',
+//     dob: new Date(1984, 6, 3, 13, 12),
+//     loves: ['being merry', 'being insane', 'card games'],
+//     location: 'New York, New York, US',
+//     gender: 'm',
+//     title: 'Osiris of Sewer Rats'
+//   }
+// ], 
+//   (err, vamps) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(vamps);
+//     }
+//     process.exit();
+// })
+
+// db.Vampire.deleteOne({hair_color: 'brown'}, (err, vamp) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamp);
+//   }
+//   process.exit();
+// })
+
+
+
+// We found out that the vampires with the blue eyes were just fakes! Let's remove all the vampires who have blue eyes from our database.
+
+
+// db.Vampire.deleteMany({eye_color: 'blue'}, (err, vamps) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(vamps);
+//     }
+//     process.exit();
+//   })
+
+
+// db.Vampire.find({}, (err, vamps) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(vamps);
+//     }
+//     process.exit();
+//   })
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
