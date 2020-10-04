@@ -467,6 +467,36 @@ const db = require('./models');
 // })
 
 
+// Rename 'Eve's' name field to 'moniker'
+
+// db.Vampire.update(
+//   {name: 'Eve'},
+//   {$rename: {name: 'moniker'}},
+//   {new: true},
+//   (err, vamp) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(vamp);
+//     }
+//     process.exit();
+// })
+
+
+// We now no longer want to categorize female gender as "f", but rather as fems. Update all females so that the they are of gender "fems".
+
+// db.Vampire.updateMany(
+//   {gender: 'f'},
+//   {gender: 'fems'},
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// })
+
 
 
 /////////////////////////////////////////////////
