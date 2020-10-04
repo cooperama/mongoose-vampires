@@ -229,6 +229,70 @@ const db = require('./models');
 /////////////////////////////////////////////////
 // ### Select with OR
 
+// are from New York, New York, US or New Orleans, Louisiana, US
+// db.Vampire.find({
+//   $or: [
+//     {location: 'New York, New York, US'},
+//     {location: 'New Orleans, Louisiana, US'}
+//   ]
+//   },
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+// love brooding or being tragic
+// db.Vampire.find({
+//   $or: [
+//     {loves: 'brooding'},
+//     {loves: 'being tragic'}
+//   ]
+//   },
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+// have more than 1000 victims or love marshmallows
+// db.Vampire.find({
+//   $or: [
+//     {victims: {$gt: 1000}},
+//     {loves: 'marshmallows'}
+//   ]
+//   },
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+// have red hair or green eyes
+// db.Vampire.find({
+//   $or: [
+//     {hair_color: 'red'},
+//     {eye_color: 'green'}
+//   ]
+//   },
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
 
