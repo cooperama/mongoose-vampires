@@ -32,7 +32,7 @@ const db = require('./models');
 //   name: 'Viago',
 //   hair_color: 'brown',
 //   eye_color: 'brown',
-//   dob: 1641-07-15,
+//   dob: new Date(1641, 7, 15),
 //   loves: ['Katherine', 'cleanliness'],
 //   location: 'New Zealand',
 //   gender: 'male',
@@ -46,12 +46,11 @@ const db = require('./models');
 //   process.exit();
 // })
 
-
 // db.Vampire.create({
 //   name: 'Nadja',
 //   hair_color: 'brown',
 //   eye_color: 'brown',
-//   dob: 1447-03-22,
+//   dob: new Date(1447, 3, 22),
 //   loves: ['Laszlo', 'orgies'],
 //   location: 'Staten Island',
 //   gender: 'female',
@@ -65,12 +64,11 @@ const db = require('./models');
 //   process.exit();
 // })
 
-
 // db.Vampire.create({
 //   name: 'Vladislav',
 //   hair_color: 'brown',
 //   eye_color: 'brown',
-//   dob: 1202-09-09,
+//   dob: new Date(1202, 9, 9),
 //   loves: ['ladies', 'poking'],
 //   location: 'New Zealand',
 //   gender: 'male',
@@ -89,7 +87,7 @@ const db = require('./models');
 //   name: 'Colin Robinson',
 //   hair_color: 'bald',
 //   eye_color: 'blue',
-//   dob: 1978-05-12,
+//   dob: new Date(1978, 5, 12),
 //   loves: ['raining on parades', 'the DMV'],
 //   location: 'Staten Island',
 //   gender: 'male',
@@ -104,11 +102,71 @@ const db = require('./models');
 // })
 
 
-
 /////////////////////////////////////////////////
 // ## QUERYING
 /////////////////////////////////////////////////
 // ### Select by comparison
+
+// Find all the vampires that that are females
+// db.Vampire.find({gender: 'f'}, (err, femaleVamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(femaleVamps);
+//   }
+//   process.exit();
+// });
+
+
+// have greater than 500 victims
+// db.Vampire.find({victims: {$gt: 500}}, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// have fewer than or equal to 150 victims
+// db.Vampire.find({victims: {$lte: 150}}, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// have a victim count is not equal to 210234
+// db.Vampire.find({victims: {$ne: 210234}}, (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
+
+// have greater than 150 AND fewer than 500 victims
+// db.Vampire.find({
+//   victims: 
+//     {
+//       $gt: 150,
+//       $lt: 500
+//     }},
+//   (err, vamps) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(vamps);
+//   }
+//   process.exit();
+// });
+
 
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
