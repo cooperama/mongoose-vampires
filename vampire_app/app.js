@@ -659,3 +659,12 @@ const db = require('./models');
 //## Negative Selection
 
 /////////////////////////////////////////////////
+
+
+// Make an index route that will res.send() (or even better--res.json()--look it up!) the json of all the data in our database.
+
+
+
+
+
+// If number 1 was easy, try to connect your database to your application and show a proper index page that displays your vampire data. If this is also easy, create a show page as well where you are showing individual vampire data.

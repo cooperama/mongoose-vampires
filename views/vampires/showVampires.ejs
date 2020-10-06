@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vampires</title>
+</head>
+<body>
+  <h1><%= vampire.name %> </h1>
+  <h3>Hair Color:</h3>
+  <p><%= vampire.hair_color %> </p>
+  <h3>Eye Color:</h3>
+  <p><%= vampire.eye_color %> </p>
+  <h3>Date of Birth:</h3>
+  <p><%= vampire.dob %> </p>
+  <h3>Location:</h3>
+  <p><%= vampire.location %> </p>
+  <h3>Gender:</h3>
+  <p><%= vampire.gender %> </p>
+  <h3>Victims:</h3>
+  <p><%= vampire.victims %> </p>
+  <h3>Loves:</h3>
+  <ul>
+    <% for( let i = 0; i < vampire.loves.length; i++ ) { %>
+    <li><%= vampire.loves[i] %> </li>
+    <% } %>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vampires</title>
+</head>
+<body>
+  <h1>Vampire Index</h1>
+  <ul class="vampires">
+    <% for( let i = 0; i < vampires.length; i++ ) { %>
+    <li><a href="/vampires/<%= vampires[i]._id %> "><%= vampires[i].name %> </a></li>
+    <% } %>
+  </ul>
+</body>
+</html>

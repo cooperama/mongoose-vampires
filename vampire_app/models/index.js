@@ -19,4 +19,4 @@ mongoose.connection.on('error', (error) => {
 
 module.exports = {
   Vampire: require('./Vampire')
-};
+}; 
